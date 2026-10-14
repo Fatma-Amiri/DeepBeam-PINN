@@ -36,9 +36,12 @@ The unified objective function optimized during training is defined as:
 $$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{data}} + \lambda_{\text{physics}} \mathcal{L}_{\text{physics}} + \lambda_{\text{hw}} \mathcal{L}_{\text{hw}}$$
 
 Where:
+
 - $\mathcal{L}_{\text{data}}$: Mean squared error between predicted spatial power and reference array factor data.
 - $\mathcal{L}_{\text{physics}}$: Explicit penalty activated when radiation power at designated jammer arrival angles ($\phi_1, \phi_2$) exceeds the high-attenuation null threshold:
-  $$\mathcal{L}_{\text{physics}} = \sum_{k \in \{\phi_1, \phi_2\}} \max\left(0, P_{\text{pred}}(k) - P_{\text{null\_target}}\right)$$
+
+$$\mathcal{L}_{\text{physics}} = \sum_{k \in \{\phi_1, \phi_2\}} \max\left(0, P_{\text{pred}}(k) - P_{\text{null\_target}}\right)$$
+
 - $\mathcal{L}_{\text{hw}}$: Network weight regularization term preventing activation saturation and ensuring numerical stability on embedded hardware.
 
 ---
