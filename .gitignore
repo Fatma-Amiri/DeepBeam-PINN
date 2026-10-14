@@ -1,0 +1,19 @@
+# MATLAB autosave and temporary files
+*.asv
+*.m~
+*.slxc
+slprj/
+*.mex*
+*.p
+
+# MATLAB log and crash dump files
+*.log
+matlab_crash_dump.*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor settings
+.vscode/
+.idea/
