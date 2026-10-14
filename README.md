@@ -1,6 +1,16 @@
 # DeepBeam-PINN: Physics-Guided Ultra-Deep Nulling for Smart Antennas
 
-**DeepBeam-PINN** is a hardware-optimized, **Physics-Informed Neural Network (PINN)** framework designed for real-time adaptive array beamforming and high-suppression interference rejection in smart antenna systems. By fusing **Particle Swarm Optimization (PSO)** for automated topology discovery with a **physics-constrained loss regularizer**, the framework synthesizes spatial radiation patterns capable of ultra-deep jammer suppression ($\le -110\text{ dB}$) while maintaining exact mainlobe signal power delivery ($0\text{ dB}$).
+## 🌐 The Challenge: Real-Time Adaptive Beamforming & Interference Mitigation
+In the field of **array signal processing** and **adaptive beamforming**, modern wireless communications, radar, and satellite systems face critical challenges from high-power intentional jamming and severe co-channel interference. The core objective of smart antenna beamforming is to dynamically steer high-gain mainlobes toward target signals while placing deep spatial attenuation notches (nulls) in the direction of interfering jammers.
+
+However, state-of-the-art beamforming methods present significant trade-offs:
+- **Data-Driven ML Baselines (e.g., SVR):** Struggle with high-dynamic-range spatial filtering, resulting in shallow jammer attenuation ($\approx -30\text{ dB}$) and unwanted mainlobe signal attenuation.
+- **Traditional Numerical Solvers:** Achieve theoretical precision but rely on heavy online matrix inversions, making them computationally unviable for real-time embedded hardware execution.
+
+---
+
+## 💡 The Solution: DeepBeam-PINN
+**DeepBeam-PINN** advances adaptive beamforming by fusing **Particle Swarm Optimization (PSO)** for automated topology discovery with a **Physics-Informed Neural Network (PINN)** framework. By embedding array factor physics directly into the neural network loss function during training, DeepBeam-PINN synthesizes beam patterns with **ultra-deep jammer suppression ($\le -110\text{ dB}$)** while guaranteeing exact mainlobe signal alignment ($0\text{ dB}$) in a low-latency, hardware-optimized footprint.
 
 ---
 
